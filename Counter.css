@@ -1,0 +1,32 @@
+@import url(
+'https://fonts.googleapis.com/css?family=Raleway'
+);
+
+body {
+    font-family: 'raleway', serif;
+}
+
+ol {
+    list-style: none;
+    counter-reset: customcounter;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+ol li {
+    counter-increment: customcounter;
+    display: flex;
+    width: 50%;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+ol li::before {
+    content: "0" counter(customcounter);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-right: 0.5rem;
+    line-height: 1;
+}
